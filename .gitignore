@@ -1,12 +1,26 @@
-Packages
-.build
-xcuserdata
-*.xcodeproj
+# Xcode
+build/
 DerivedData/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata
+
+# macOS
 .DS_Store
-db.sqlite
+
+# Swift Package Manager
 .swiftpm
-.env
-.env.*
-! .env.example
-.vscode
+Package.resolved
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build
+
+# Temporary files
+*.log
+*.tmp
+
