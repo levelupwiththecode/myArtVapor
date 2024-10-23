@@ -13,7 +13,7 @@ public func configure(_ app: Application) async throws {
         port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ?? MySQLConfiguration.ianaPortNumber,
         username: Environment.get("DATABASE_USERNAME") ?? "root",
         password: Environment.get("DATABASE_PASSWORD") ?? "",
-        database: Environment.get("DATABASE_NAME") ?? "myArt"
+        database: Environment.get("DATABASE_NAME") ?? "mio"
     ), as: .mysql)
 
     app.migrations.add(CreateTodo())

@@ -11,5 +11,19 @@ import Vapor
 
 final class Artist:Model,Content, @unchecked Sendable
 {
-    let schema = "Artiste"
+    static  let schema = "Artiste"
+    
+    @ID(custom: "idArtiste")
+    var id: UUID?
+    
+    @Field(key:"nomArtiste")
+    var nomArtiste:String
+    
+    @Field(key:"prenomArtiste")
+    var prenomArtiste:String
+    
+    @Field(key:"emailArtist")
+    var emailArtiste:String
+    
+  
 }

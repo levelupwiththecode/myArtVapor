@@ -33,6 +33,9 @@ final class Museum: Model,Content,@unchecked Sendable
     @Field(key:"descriptionMusee")
     var  descriptionMusee :String
     
+    @Field(key:"imageMusee")
+    var  imageMusee :String
+    
     @Field(key:"adresseMusee")
     var  adresseMusee:String
     

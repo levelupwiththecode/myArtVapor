@@ -1,6 +1,6 @@
 //
 //  Artwork.swift
-//  
+//
 //
 //  Created by Massidé Dosso on 20/10/2024.
 //
@@ -9,35 +9,39 @@ import Vapor
 import Fluent
 
 final class Artwork: Model, Content, @unchecked Sendable {
-    static let schema = "artworks" // Table MySQL artworks
+    static let schema = "Art" // Table MySQL artworks
     
-    @ID(custom: .id)
-    var id: Int?
+    @ID(custom: "idArt")
+    var id: UUID?
     
-    @Field(key: "title")
-    var title: String?
+    @Field(key: "nameArt")
+    var nameArt: String
     
-    @Field(key: "artist")
-    var artist: String?
+    @Field(key: "nameArtistArt")
+    var nameArtistArt: String
     
-    @Field(key: "image_name")
-    var imageName: String?
+    @Field(key:"courantArtistiqueArt")
+    var courantArtistiqueArt: String 
     
-    @Field(key: "year")
-    var year: Date?
+    @Field(key: "imageArt")
+    var imageArt: String
     
-    @Field(key: "description")
-    var description: String?
+    @Field(key: "descriptionArt")
+    var descriptionArt: String
     
-    init() { }
+    @Field(key: "dateArt")
+    var dateArt: String
     
-    init(id: Int? = nil, title: String? = nil, artist: String? = nil, imageName: String? = nil, year: Date? = nil, description: String? = nil) {
+    
+    init() {}
+    
+    init(id: UUID? = nil, nameArt: String, nameArtistArt: String, imageArt: String, descriptionArt: String, dateArt: String) {
         self.id = id
-        self.title = title
-        self.artist = artist
-        self.imageName = imageName
-        self.year = year
-        self.description = description
+        self.nameArt = nameArt
+        self.nameArtistArt = nameArtistArt
+        self.imageArt = imageArt
+        self.descriptionArt = descriptionArt
+        self.dateArt = dateArt
     }
     
 }
